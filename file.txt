@@ -142,8 +142,5 @@
 		"MinValue": "150000",
 		"Status": "GREEN",
 		"Message": "Unbound DNS Count Looks Fine"
-	},
-	{
-		"ApplicationName": ""
 	}
 ]
