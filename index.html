@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>19. Using jQuery to retrieve JSON via AJAX</title>
+  <script type="text/javascript" src="https://azureint365.sharepoint.com/sites/NewTeam/SiteAssets/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript">
+
+function clickme() {
+       $.ajax({
+       url: 'https://azureint365.sharepoint.com/sites/NewTeam/SiteAssets/data19.json',
+       dataType: 'json',
+       success: function(data) {
+          var items = [];
+
+          $.each(data, function(key, val) {
+
+            items.push('<li id="' + key + '">' + val + '</li>');    
+
+          });
+
+          $('<ul/>', {
+             'class': 'interest-list',
+             html: items.join('')
+          }).appendTo('body');
+
+       },
+      statusCode: {
+         404: function() {
+           alert('There was a problem with the server.  Try again soon!');
+         }
+       }
+    });
+
+}
+
+</script>
+
+</head>
+<body>
+  <h1 id="title">19. Using jQuery to retrieve JSON via AJAX</h1>
+
+  <a href="#" onclick="clickme();">Get JSON Data</a>
+</body>
+</html>
