@@ -56,7 +56,7 @@ svg.style("cursor","move");
 var currentdate = new Date(); 
 var datestr = currentdate.getDate().toString() + (currentdate.getMonth()+1).toString()  + currentdate.getFullYear().toString() + currentdate.getHours().toString() + currentdate.getMinutes().toString() + currentdate.getSeconds().toString();
 
-d3.json("graph.json?AS="+datestr, function(error, graph) {
+d3.json("output.json?AS="+datestr, function(error, graph) {
 
 var linkedByIndex = {};
     graph.links.forEach(function(d) {
