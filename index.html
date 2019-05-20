@@ -103,7 +103,7 @@ var linkedByIndex = {};
     .call(force.drag)
 .on("click", function (d) {
           //    removePopup();
-              drawPopup(d.name,(d3.event.pageX) + "px",(d3.event.pageY) + "px");
+              drawPopup(d.message,(d3.event.pageX) + "px",(d3.event.pageY) + "px");
             })
 	
 	node.on("dblclick.zoom", function(d) { d3.event.stopPropagation();
@@ -354,7 +354,7 @@ function removePopup() {
         foreignObject.setAttribute('y', y);
         foreignObject.setAttribute('id', "frObj");
         var div = document.createElement('div');
-        div.innerHTML = "<div id='divPopup' style='width:90%height:90%;background: #eee;box-shadow: 0 0 5px #999999;z-index: 10;padding:10px;'><div style='text-align:right;' onclick='javascript:document.getElementById(\"frObj\").remove();'>&times;</div><p style='color: #2e6c80; text-align: right;'><p style='color: #2e6c80; text-align: left;'>" + content + "</p></div>";
+        div.innerHTML = "<div id='divPopup' style='width:90%height:90%;background: #eee;box-shadow: 0 0 5px #999999;z-index: 10;padding:10px;'><div style='text-align:right;' onclick='javascript:document.getElementById(\"frObj\").remove();'>&times;</div><p style='color: #2e6c80; text-align: right;'><p style='color: #2e6c80;text-align:center;font-family:Segoe UI;font-size:12px;'>" + content + "</p></div>";
 
         foreignObject.appendChild(div);
         svg.appendChild(foreignObject); //svg is an already created svg element containing a d3 chart
