@@ -104,7 +104,7 @@ var linkedByIndex = {};
 .on("click", function (d) {
           if(d.message!="")
 		  {
-              drawPopup(d.message,(d3.event.pageX) + "px",(d3.event.pageY) + "px");
+              drawPopup("Source: "+d.source+"&nbsp;&nbsp;Metric: "+d.metric+"<br/>Status: "+d.message,(d3.event.pageX) + "px",(d3.event.pageY) + "px");
 		  }
             })
 	
