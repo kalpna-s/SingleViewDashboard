@@ -102,8 +102,10 @@ var linkedByIndex = {};
     .attr("class", "node")	
     .call(force.drag)
 .on("click", function (d) {
-          //    removePopup();
+          if(d.message!="")
+		  {
               drawPopup(d.message,(d3.event.pageX) + "px",(d3.event.pageY) + "px");
+		  }
             })
 	
 	node.on("dblclick.zoom", function(d) { d3.event.stopPropagation();
