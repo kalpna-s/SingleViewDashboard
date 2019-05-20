@@ -354,7 +354,7 @@ function removePopup() {
         foreignObject.setAttribute('y', y);
         foreignObject.setAttribute('id', "frObj");
         var div = document.createElement('div');
-        div.innerHTML = "<div id='divPopup' style='width:90%height:90%;background: #eee;box-shadow: 0 0 5px #999999;z-index: 10;padding:10px;'><div style='text-align:right;' onclick='javascript:document.getElementById(\"frObj\").remove();'>&times;</div><p style='color: #2e6c80; text-align: right;'><strong><a href='https://google.com' target='_blank'>Full Details</a></strong><br/>(press Ctrl and Click to follow above link)</p><br/><p style='color: #2e6c80; text-align: left;'>Comment: <br/>" + content + "</p></div>";
+        div.innerHTML = "<div id='divPopup' style='width:90%height:90%;background: #eee;box-shadow: 0 0 5px #999999;z-index: 10;padding:10px;'><div style='text-align:right;' onclick='javascript:document.getElementById(\"frObj\").remove();'>&times;</div><p style='color: #2e6c80; text-align: right;'><p style='color: #2e6c80; text-align: left;'>" + content + "</p></div>";
 
         foreignObject.appendChild(div);
         svg.appendChild(foreignObject); //svg is an already created svg element containing a d3 chart
